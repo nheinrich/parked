@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <meta charset=utf-8>
+    <title>X X X X</title>
+    <script src="./randomColor.js"></script>
+    <style>
+      body, html, #canvas {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+      }
+      #canvas {
+        background: transparent;
+        border: 20px solid transparent;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="canvas"></div>
+    <script>
+      // https://github.com/davidmerfield/randomColor
+      var canvas = document.getElementById("canvas")
+      var colors = randomColor({hue: "random", luminosity: "random", count: 2})
+      canvas.style.background = colors[0]
+      canvas.style.borderColor = colors[1]
+    </script>
+  </body>
+
+</html>
