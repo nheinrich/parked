@@ -16,18 +16,29 @@
         background: transparent;
         border: 20px solid transparent;
         box-sizing: border-box;
+        transition: all 0.3s;
       }
     </style>
+    <script>
+      function colorize(){
+        // https://github.com/davidmerfield/randomColor
+        var canvas = document.getElementById("canvas")
+        var colors = randomColor({hue: "random", luminosity: "random", count: 2})
+        canvas.style.background = colors[0]
+        canvas.style.borderColor = colors[1]
+      };
+
+      document.addEventListener("click", function(event){
+        event.preventDefault();
+        colorize();
+      });
+    </script>
   </head>
 
   <body>
     <div id="canvas"></div>
     <script>
-      // https://github.com/davidmerfield/randomColor
-      var canvas = document.getElementById("canvas")
-      var colors = randomColor({hue: "random", luminosity: "random", count: 2})
-      canvas.style.background = colors[0]
-      canvas.style.borderColor = colors[1]
+      colorize();
     </script>
   </body>
 
