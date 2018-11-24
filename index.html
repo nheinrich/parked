@@ -20,14 +20,14 @@
       }
     </style>
     <script>
+      // change to a random site color
       function colorize(){
-        // https://github.com/davidmerfield/randomColor
         var canvas = document.getElementById("canvas")
         var colors = randomColor({hue: "random", luminosity: "random", count: 2})
         canvas.style.background = colors[0]
         canvas.style.borderColor = colors[1]
       };
-
+      // change site color if the user clicks anywhere
       document.addEventListener("click", function(event){
         event.preventDefault();
         colorize();
